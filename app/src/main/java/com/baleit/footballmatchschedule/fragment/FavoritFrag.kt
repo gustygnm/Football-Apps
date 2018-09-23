@@ -21,10 +21,10 @@ class FavoritFrag : Fragment() {
 
         tabLayout = views.findViewById(R.id.tablayout_favorit) as TabLayout
         val viewPager = views.findViewById(R.id.viewpager_favorit) as ViewPager
-        val adapter = MyPagerAdapterFavorit(fragmentManager, tabLayout!!.getTabCount())
+        val adapter = tabLayout?.getTabCount()?.let { MyPagerAdapterFavorit(fragmentManager, it) }
         viewPager.adapter = adapter
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-        tabLayout!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        tabLayout?.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager.currentItem = tab.position
             }

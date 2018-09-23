@@ -101,7 +101,7 @@ class TeamsSearchFrag : Fragment(), TeamsView {
         menu.clear()
         inflater.inflate(R.menu.search, menu)
         val item = menu.findItem(R.id.action_search)
-        val searchView = SearchView((activity as MainActivity).supportActionBar!!.themedContext)
+        val searchView = SearchView((activity as MainActivity).supportActionBar?.themedContext)
         MenuItemCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW or MenuItemCompat.SHOW_AS_ACTION_IF_ROOM)
         MenuItemCompat.setActionView(item, searchView)
         searchView.queryHint = getString(R.string.telusuri)

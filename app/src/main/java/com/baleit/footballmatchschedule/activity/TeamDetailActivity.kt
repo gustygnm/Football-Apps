@@ -54,10 +54,10 @@ class TeamDetailActivity : AppCompatActivity(), TeamDetailView {
 
         tabLayout = findViewById(R.id.tablayoutFavorit) as TabLayout
         val viewPager = findViewById(R.id.viewpager_favorit) as ViewPager
-        val adapter = MyPagerAdapterDetailTeam(supportFragmentManager, tabLayout!!.getTabCount())
+        val adapter = tabLayout?.getTabCount()?.let { MyPagerAdapterDetailTeam(supportFragmentManager, it) }
         viewPager.adapter = adapter
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-        tabLayout!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        tabLayout?.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager.currentItem = tab.position
             }

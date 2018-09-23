@@ -52,8 +52,8 @@ class PlayersFrag : Fragment(), PlayersView {
                 ctx.startActivity<PlayerDetailActivity>("idPlayer" to "${it.idPlayer}","strPlayer" to "${it.strPlayer}")
             }
 
-            val intent = activity!!.intent
-            id = intent.getStringExtra("id")
+            val intent = activity?.intent
+            id = intent?.getStringExtra("id").toString()
             rvPlayer.layoutManager = LinearLayoutManager(ctx)
             rvPlayer.adapter = adapter
             presenter = PlayersPresenter(this, ApiRepo(), Gson())

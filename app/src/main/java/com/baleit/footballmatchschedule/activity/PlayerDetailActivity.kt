@@ -35,11 +35,11 @@ class PlayerDetailActivity() : AppCompatActivity(), PlayerDetailView {
 
         val intent = intent
         id = intent.getStringExtra("idPlayer")
-        supportActionBar!!.title = intent.getStringExtra("strPlayer")
+        supportActionBar?.title = intent.getStringExtra("strPlayer")
 
         if (supportActionBar != null) {
-            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-            supportActionBar!!.setDisplayShowHomeEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDisplayShowHomeEnabled(true)
         }
 
         detailPresenter = PlayerDetailPresenter(this, ApiRepo(), Gson())

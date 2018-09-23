@@ -14,11 +14,6 @@ import com.baleit.footballmatchschedule.item.TeamsItems
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
-/**
- * Created by root on 1/16/18.
- */
-
-
 class TeamsAdapter(private val context: Context?, private var teams: List<TeamsItems>, private val listener: (TeamsItems) -> Unit)
     : RecyclerView.Adapter<TeamsAdapter.MatchViewHolder>() {
 

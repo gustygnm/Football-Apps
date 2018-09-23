@@ -63,7 +63,7 @@ class MatchFrag : Fragment() {
         val adapter = tabLayout?.getTabCount()?.let { MyPagerAdapterMatch(fragmentManager, it, idLeague) }
         viewPager.adapter = adapter
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-        tabLayout!!.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        tabLayout?.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPager.currentItem = tab.position
             }

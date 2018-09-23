@@ -35,7 +35,7 @@ import java.util.*
 
 class MatchSearchAvtivity : AppCompatActivity(), BallView {
 
-    private val matchItems: MutableList<MatchItems>? = mutableListOf()
+    private val matchItems: MutableList<MatchItems> = mutableListOf()
     private lateinit var searchPresenter: BallPresenter
     private lateinit var matchAdapter: BallAdapter
     private lateinit var pbNext: ProgressBar
@@ -71,24 +71,22 @@ class MatchSearchAvtivity : AppCompatActivity(), BallView {
 
         pbNext = findViewById(R.id.pb_next) as ProgressBar
         rvNext = findViewById(R.id.rv_next) as RecyclerView
-        matchAdapter = matchItems?.let {
-            BallAdapter(this, it) {
-                startActivity<DetailActivity>(
-                        "idHome" to it.homeTeamId, "idAway" to it.awayTeamId,
-                        "goalHome" to it.scoreHome, "goalAway" to it.scoreAway,
-                        "homeTeam" to it.teamHome, "awayTeam" to it.teamAway,
-                        "dateMatch" to it.dateMatch.toString().dateFormat(), "matchId" to it.eventId
-                )
-            }
-        }!!
+        matchAdapter = BallAdapter(this, matchItems) {
+            startActivity<DetailActivity>(
+                    "idHome" to it.homeTeamId, "idAway" to it.awayTeamId,
+                    "goalHome" to it.scoreHome, "goalAway" to it.scoreAway,
+                    "homeTeam" to it.teamHome, "awayTeam" to it.teamAway,
+                    "dateMatch" to it.dateMatch.toString().dateFormat(), "matchId" to it.eventId
+            )
+        }
 
         rvNext.layoutManager = LinearLayoutManager(this)
         rvNext.adapter = matchAdapter
 
-        supportActionBar!!.title = "Pencarian"
+        supportActionBar?.title = "Pencarian"
         if (supportActionBar != null) {
-            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-            supportActionBar!!.setDisplayShowHomeEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDisplayShowHomeEnabled(true)
         }
 
     }
@@ -104,6 +102,11 @@ class MatchSearchAvtivity : AppCompatActivity(), BallView {
         }
     }
 
+    override fun onBackPressed() {
+        finish()
+        startActivity<MainActivity>()
+        super.onBackPressed()
+    }
     @RequiresApi(Build.VERSION_CODES.N)
     fun String.dateFormat(format: String? = "EEEE, dd MMMM yyyy"): String {
         val date: Date = SimpleDateFormat("dd/MM/yy").parse(this)
@@ -115,7 +118,7 @@ class MatchSearchAvtivity : AppCompatActivity(), BallView {
         menuInflater.inflate(R.menu.search, menu)
         val item = menu.findItem(R.id.action_search)
         if (item != null) {
-            val searchView = SearchView((this).supportActionBar!!.themedContext)
+            val searchView = SearchView((this).supportActionBar?.themedContext)
             MenuItemCompat.setShowAsAction(item, MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW or MenuItemCompat.SHOW_AS_ACTION_IF_ROOM)
             MenuItemCompat.setActionView(item, searchView)
             searchView.queryHint = getString(R.string.telusuri)

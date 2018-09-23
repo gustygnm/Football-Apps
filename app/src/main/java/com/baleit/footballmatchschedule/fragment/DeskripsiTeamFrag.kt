@@ -32,8 +32,8 @@ class DeskripsiTeamFrag : Fragment(), TeamDetailView {
         cardviewDesakripsi=views?.findViewById(R.id.cardviewDesakripsi) as CardView
         progressBar=views?.findViewById(R.id.progressBar) as ProgressBar
 
-        val intent = activity!!.intent
-        id = intent.getStringExtra("id")
+        val intent = activity?.intent
+        id = intent?.getStringExtra("id").toString()
         val request = ApiRepo()
         val gson = Gson()
         presenter = TeamDetailPresenter(this, request, gson)
