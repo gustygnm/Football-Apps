@@ -9,23 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.baleit.footballmatchschedule.R
-import com.baleit.footballmatchschedule.R.array.league
-import com.baleit.footballmatchschedule.activity.TeamDetailActivity
 import com.baleit.footballmatchschedule.api.ApiRepo
-import com.baleit.footballmatchschedule.item.TeamsItems
 import com.baleit.footballmatchschedule.util.invisible
 import com.baleit.footballmatchschedule.util.visible
-import com.baleit.footballmatchschedule.adapter.TeamsAdapter
-import com.baleit.footballmatchschedule.presenter.TeamsPresenter
-import com.baleit.footballmatchschedule.view.TeamsView
 import com.google.gson.Gson
 import org.jetbrains.anko.*
 import org.jetbrains.anko.support.v4.ctx
-import android.widget.ArrayAdapter
 import com.baleit.footballmatchschedule.activity.PlayerDetailActivity
-import com.baleit.footballmatchschedule.adapter.FavoriteTeamsAdapter
 import com.baleit.footballmatchschedule.adapter.PlayersAdapter
-import com.baleit.footballmatchschedule.db.FavoriteTeams
 import com.baleit.footballmatchschedule.item.PlayersItems
 import com.baleit.footballmatchschedule.presenter.PlayersPresenter
 import com.baleit.footballmatchschedule.view.PlayersView
@@ -49,7 +40,7 @@ class PlayersFrag : Fragment(), PlayersView {
         views?.let {
 
             adapter = PlayersAdapter(context, player) {
-                ctx.startActivity<PlayerDetailActivity>("idPlayer" to "${it.idPlayer}","strPlayer" to "${it.strPlayer}")
+                ctx.startActivity<PlayerDetailActivity>("idPlayer" to "${it.idPlayer}", "strPlayer" to "${it.strPlayer}")
             }
 
             val intent = activity?.intent

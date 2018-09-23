@@ -38,9 +38,8 @@ class FavoritTeamsFrag : Fragment(), BallViewFavoritTeams {
         pbFavorit.visibility = View.INVISIBLE
     }
 
-
     override fun showNull() {
-        toast("There is no Previous Match(es)")
+        toast(R.string.previous_match)
     }
 
     override fun showLoading() {
@@ -50,7 +49,6 @@ class FavoritTeamsFrag : Fragment(), BallViewFavoritTeams {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val views = inflater?.inflate(R.layout.fragment_favorit_match, container, false)
-
         pbFavorit = views?.findViewById(R.id.pb_favorit) as ProgressBar
         rvFavorit = views?.findViewById(R.id.rv_favorit) as RecyclerView
 
@@ -59,13 +57,9 @@ class FavoritTeamsFrag : Fragment(), BallViewFavoritTeams {
             adapter = FavoriteTeamsAdapter(context, favoriteTeams) {
                 ctx.startActivity<TeamDetailActivity>("id" to "${it.teamId}")
             }
-
             rvFavorit.layoutManager = LinearLayoutManager(ctx)
             rvFavorit.adapter = adapter
-
-//            showFavorite()
         }
-
         return views
     }
 
@@ -74,6 +68,7 @@ class FavoritTeamsFrag : Fragment(), BallViewFavoritTeams {
         showFavorite()
         super.onResume()
     }
+
     private fun showFavorite() {
         context?.database?.use {
             val result = select(FavoriteTeams.TABLE_FAVORITE)

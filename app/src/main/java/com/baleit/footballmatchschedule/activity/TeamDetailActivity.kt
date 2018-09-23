@@ -51,7 +51,6 @@ class TeamDetailActivity : AppCompatActivity(), TeamDetailView {
         supportActionBar?.title = "Team Detail"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
         tabLayout = findViewById(R.id.tablayoutFavorit) as TabLayout
         val viewPager = findViewById(R.id.viewpager_favorit) as ViewPager
         val adapter = tabLayout?.getTabCount()?.let { MyPagerAdapterDetailTeam(supportFragmentManager, it) }
@@ -108,7 +107,6 @@ class TeamDetailActivity : AppCompatActivity(), TeamDetailView {
                 data[0].teamBadge)
         Picasso.get().load(data[0].teamBadge).into(teamBadge)
         teamName.text = data[0].teamName
-//        teamDescription.text = data[0].teamDescription
         teamFormedYear.text = data[0].teamFormedYear
         teamStadium.text = data[0].teamStadium
 

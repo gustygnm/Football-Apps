@@ -24,7 +24,6 @@ class FavoritMatchFrag : Fragment(), BallViewFavoritMatch {
 
     private var favoriteMatches: MutableList<FavoriteMatch> = mutableListOf()
     private lateinit var adapter: FavoriteMatchAdapter
-
     private lateinit var pbFavorit: ProgressBar
     private lateinit var rvFavorit: RecyclerView
 
@@ -40,7 +39,7 @@ class FavoritMatchFrag : Fragment(), BallViewFavoritMatch {
 
 
     override fun showNull() {
-        toast("There is no Previous Match(es)")
+        toast(R.string.previous_match)
     }
 
     override fun showLoading() {
@@ -80,6 +79,7 @@ class FavoritMatchFrag : Fragment(), BallViewFavoritMatch {
         showFavorite()
         super.onResume()
     }
+
     private fun showFavorite() {
         context?.database?.use {
             val result = select(FavoriteMatch.TABLE_FAVORITE)

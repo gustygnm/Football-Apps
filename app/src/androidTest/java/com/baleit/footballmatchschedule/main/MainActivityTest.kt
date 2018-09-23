@@ -18,9 +18,6 @@ import android.support.test.espresso.IdlingRegistry
 import com.baleit.footballmatchschedule.idling.EspressoIdlingResource
 import org.junit.Before
 
-
-
-
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
     @Rule
@@ -47,12 +44,11 @@ class MainActivityTest {
 
         onView(withId(bottom_navigation))
                 .check(matches(isDisplayed()))
-        onView(withId(next_match)).perform(click())
+        onView(withId(teams)).perform(click())
 
-        onView(withId(rv_next))
+        onView(withId(rv_teams))
                 .check(matches(isDisplayed()))
-        onView(withId(rv_next)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(15))
-        onView(withId(rv_next)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(1, click()))
+        onView(withId(rv_teams)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(1, click()))
 
         onView(withId(add_to_favorite))
                 .check(matches(isDisplayed()))

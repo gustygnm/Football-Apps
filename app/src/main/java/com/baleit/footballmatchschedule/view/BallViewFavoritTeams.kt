@@ -1,6 +1,5 @@
 package com.baleit.footballmatchschedule.view
 
-import com.baleit.footballmatchschedule.db.FavoriteMatch
 import com.baleit.footballmatchschedule.db.FavoriteTeams
 
 interface BallViewFavoritTeams {

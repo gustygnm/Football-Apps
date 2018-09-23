@@ -10,10 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import java.text.SimpleDateFormat
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.ProgressBar
-import android.widget.Spinner
 import com.baleit.footballmatchschedule.activity.DetailActivity
 import com.google.gson.Gson
 import com.baleit.footballmatchschedule.api.ApiRepo
@@ -21,7 +18,6 @@ import com.baleit.footballmatchschedule.item.MatchItems
 import com.baleit.footballmatchschedule.R
 import com.baleit.footballmatchschedule.adapter.BallAdapter
 import com.baleit.footballmatchschedule.presenter.BallPresenter
-import com.baleit.footballmatchschedule.presenter.MatchSearchPresenter
 import com.baleit.footballmatchschedule.util.invisible
 import com.baleit.footballmatchschedule.util.visible
 import com.baleit.footballmatchschedule.view.BallView

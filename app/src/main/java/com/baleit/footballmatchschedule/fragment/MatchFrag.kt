@@ -3,26 +3,16 @@ package com.baleit.footballmatchschedule.fragment
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
-import android.support.v4.view.MenuItemCompat
 import android.support.v4.view.ViewPager
-import android.support.v7.widget.SearchView
 import android.view.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.baleit.footballmatchschedule.R
-import com.baleit.footballmatchschedule.activity.DetailActivity
-import com.baleit.footballmatchschedule.activity.MainActivity
 import com.baleit.footballmatchschedule.activity.MatchSearchAvtivity
-import com.baleit.footballmatchschedule.api.ApiRepo
 import com.baleit.footballmatchschedule.pagerAdapter.MyPagerAdapterMatch
-import com.baleit.footballmatchschedule.presenter.MatchSearchPresenter
-import com.baleit.footballmatchschedule.presenter.TeamsSearchPresenter
-import com.google.gson.Gson
-import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.ctx
 import org.jetbrains.anko.support.v4.startActivity
-import org.jetbrains.anko.support.v4.toast
 
 class MatchFrag : Fragment() {
 
@@ -30,7 +20,6 @@ class MatchFrag : Fragment() {
     private lateinit var spinner: Spinner
     lateinit var idLeague: String
     private lateinit var leagueName: String
-    private lateinit var searchPresenter: MatchSearchPresenter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

@@ -4,23 +4,16 @@ import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
-import android.util.Log
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.baleit.footballmatchschedule.R
-import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.baleit.footballmatchschedule.api.ApiRepo
 import kotlinx.android.synthetic.main.activity_player_detail.*
-import org.jetbrains.anko.ctx
 import com.baleit.footballmatchschedule.item.PlayerDetailItems
-import com.baleit.footballmatchschedule.item.TeamsItems
 import com.baleit.footballmatchschedule.presenter.PlayerDetailPresenter
 import com.baleit.footballmatchschedule.view.PlayerDetailView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_detail_team.*
-import org.jetbrains.anko.toast
 
 class PlayerDetailActivity() : AppCompatActivity(), PlayerDetailView {
 
@@ -36,11 +29,8 @@ class PlayerDetailActivity() : AppCompatActivity(), PlayerDetailView {
         val intent = intent
         id = intent.getStringExtra("idPlayer")
         supportActionBar?.title = intent.getStringExtra("strPlayer")
-
-        if (supportActionBar != null) {
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            supportActionBar?.setDisplayShowHomeEnabled(true)
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         detailPresenter = PlayerDetailPresenter(this, ApiRepo(), Gson())
         detailPresenter.getPlayerDetailList(id)

@@ -1,7 +1,5 @@
 package com.baleit.footballmatchschedule.fragment
 
-import android.app.SearchManager
-import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -27,9 +25,6 @@ import android.view.*
 import com.baleit.footballmatchschedule.activity.MainActivity
 import android.view.MenuInflater
 import com.baleit.footballmatchschedule.presenter.TeamsSearchPresenter
-import kotlinx.android.synthetic.main.fragment_prev.*
-import org.jetbrains.anko.support.v4.toast
-
 
 class TeamsFrag : Fragment(), TeamsView {
 

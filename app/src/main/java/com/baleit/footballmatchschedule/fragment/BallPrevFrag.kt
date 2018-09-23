@@ -9,10 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.ProgressBar
-import android.widget.Spinner
 import com.baleit.footballmatchschedule.activity.DetailActivity
 import com.google.gson.Gson
 import com.baleit.footballmatchschedule.api.ApiRepo
@@ -38,8 +35,6 @@ class BallPrevFrag : Fragment(), BallView {
     private lateinit var pbPast: ProgressBar
     private lateinit var rvPast: RecyclerView
 
-
-
     override fun showMatch(data: List<MatchItems>?) {
         data?.let {
             matchAdapter.refresh(it)
@@ -50,7 +45,6 @@ class BallPrevFrag : Fragment(), BallView {
         pbPast.invisible()
         rvPast.visible()
     }
-
 
     override fun showNull() {
         toast(getString(R.string.previous_match))
@@ -68,13 +62,12 @@ class BallPrevFrag : Fragment(), BallView {
         pbPast = views?.findViewById(R.id.pb_past) as ProgressBar
         rvPast = views?.findViewById(R.id.rv_past) as RecyclerView
         views?.let {
-
             matchAdapter = BallAdapter(context, matchItems) {
-                var dateMatch:String
-                if (it.dateMatch.toString().equals("null")){
-                    dateMatch= "No Date"
-                } else{
-                    dateMatch= it.dateMatch.toString().dateFormat()
+                var dateMatch: String
+                if (it.dateMatch.toString().equals("null")) {
+                    dateMatch = "No Date"
+                } else {
+                    dateMatch = it.dateMatch.toString().dateFormat()
                 }
                 ctx.startActivity<DetailActivity>(
                         "idHome" to it.homeTeamId, "idAway" to it.awayTeamId,
@@ -88,7 +81,7 @@ class BallPrevFrag : Fragment(), BallView {
             rvPast.adapter = matchAdapter
             matchPresenter = BallPresenter(this, ApiRepo(), Gson())
 
-            var idLeague: String = arguments?.getString("MATCH_ID","4328").toString()
+            var idLeague: String = arguments?.getString("MATCH_ID", "4328").toString()
             matchPresenter.getTeamListPrev(idLeague)
         }
         return views

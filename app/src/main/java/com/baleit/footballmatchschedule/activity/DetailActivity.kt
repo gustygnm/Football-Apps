@@ -81,11 +81,8 @@ class DetailActivity() : AppCompatActivity(), DetailView {
 
         favoriteState()
         supportActionBar?.title = "" + homeTeam.text + " vs " + homeTeamSide.text
-
-        if (supportActionBar != null) {
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            supportActionBar?.setDisplayShowHomeEnabled(true)
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
     override fun showLoading() {

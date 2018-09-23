@@ -1,111 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/CoordinatorAtas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundTab">
 
-    <!--<android.support.design.widget.AppBarLayout-->
-        <!--android:id="@+id/app_bar_layout"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:fitsSystemWindows="true"-->
-        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
-
-        <!--<android.support.design.widget.CollapsingToolbarLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:fitsSystemWindows="true"-->
-            <!--app:contentScrim="?attr/colorPrimary"-->
-            <!--app:expandedTitleTextAppearance="@android:color/transparent"-->
-            <!--app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
-
-
-            <!--<RelativeLayout-->
-                <!--android:id="@+id/layoutatasTentang"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="200dp"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:background="@color/colorPrimaryDark"-->
-                <!--app:layout_collapseMode="pin">-->
-
-                <!--<ImageView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="200dp"-->
-                    <!--android:scaleType="centerCrop"-->
-                    <!--android:src="@drawable/bg01" />-->
-
-                <!--<ImageView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="200dp"-->
-                    <!--android:background="#6c000000"-->
-                    <!--android:scaleType="centerCrop" />-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/txtjdl"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginBottom="10dp"-->
-                    <!--android:layout_marginLeft="10dp"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:text="@string/pilih_liga"-->
-                    <!--android:textColor="@color/colorTextWhite"-->
-                    <!--android:textSize="16sp" />-->
-
-                <!--<Spinner-->
-                    <!--android:id="@+id/spinner_prev"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--android:layout_below="@id/txtjdl"-->
-                    <!--android:layout_marginBottom="10dp"-->
-                    <!--android:layout_marginLeft="10dp"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:background="@drawable/round"></Spinner>-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/txtcari"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@id/spinner_prev"-->
-                    <!--android:layout_marginBottom="10dp"-->
-                    <!--android:layout_marginLeft="10dp"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:text="@string/cari_pertandingan"-->
-                    <!--android:textColor="@color/colorTextWhite"-->
-                    <!--android:textSize="16sp" />-->
-
-                <!--<SearchView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--android:layout_below="@id/txtcari"-->
-                    <!--android:id="@+id/seach"-->
-                    <!--android:layout_marginBottom="10dp"-->
-                    <!--android:layout_marginLeft="10dp"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:autofillHints="Cari"-->
-                    <!--android:background="@drawable/round"></SearchView>-->
-            <!--</RelativeLayout>-->
-
-        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
-    <!--</android.support.design.widget.AppBarLayout>-->
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_past"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>-->
 
     <ProgressBar
         android:id="@+id/pb_past"
         android:layout_width="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_height="50dp"/>
+        android:layout_marginTop="10dp" />
 
 </android.support.design.widget.CoordinatorLayout>

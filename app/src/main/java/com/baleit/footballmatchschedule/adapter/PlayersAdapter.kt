@@ -11,7 +11,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.baleit.footballmatchschedule.R
 import com.baleit.footballmatchschedule.item.PlayersItems
-import com.baleit.footballmatchschedule.item.TeamsItems
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.sdk25.coroutines.onClick
 

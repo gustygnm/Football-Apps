@@ -4,7 +4,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import com.baleit.footballmatchschedule.fragment.DeskripsiTeamFrag
-import com.baleit.footballmatchschedule.fragment.FavoritTeamsFrag
 import com.baleit.footballmatchschedule.fragment.PlayersFrag
 
 class MyPagerAdapterDetailTeam(fm: FragmentManager?, internal var mNumOfTabs: Int) : FragmentStatePagerAdapter(fm) {

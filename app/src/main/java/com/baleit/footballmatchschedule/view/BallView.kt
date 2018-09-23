@@ -1,7 +1,5 @@
 package com.baleit.footballmatchschedule.view
 
-import android.view.Menu
-import android.view.MenuInflater
 import com.baleit.footballmatchschedule.item.MatchItems
 
 interface BallView {

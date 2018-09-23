@@ -97,4 +97,7 @@ dependencies {
     androidTestImplementation   "com.android.support.test.espresso.idling:idling-concurrent:3.0.2"
 
     implementation 'cn.hugeterry.coordinatortablayout:coordinatortablayout:1.0.6'
+
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
 }
