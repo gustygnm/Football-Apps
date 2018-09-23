@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/match"
+        android:enabled="true"
+        android:icon="@drawable/past_match"
+        android:title="Match"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/teams"
+        android:enabled="true"
+        android:title="Teams"
+        android:icon="@drawable/ic_teams"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/favorit"
+        android:enabled="true"
+        android:icon="@drawable/ic_stars_black_24dp"
+        android:title="Favorit"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/tentang_app"
+        android:enabled="true"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Tentang"
+        app:showAsAction="ifRoom" />
+</menu>

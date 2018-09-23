@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Football Apps</string>
+
+    <string name="update">September 2018</string>
+    <string name="versi_app">1.0 final</string>
+    <string name="des_app_datar">Aplikasi Football Match Schedule</string>
+    <string name="copyright">Copyright © 2018. Gusti Ngurah Mertayasa</string>
+
+    <string name="home_team">FC Barcelona</string>
+    <string name="home_team_side">Bayern Munich</string>
+    <string name="defaul_score">0 : 0</string>
+    <string name="pilih_liga">Pilih Liga:</string>
+    <string name="cari_pertandingan">Cari Pertandingan Favorit Anda:</string>
+    <string name="add_to_favorit">Added to favorite</string>
+    <string name="remove_to_favorit">Removed to favorite</string>
+    <string name="pesan_keluar">Tekan lagi untuk keluar</string>
+    <string name="telusuri">Telusuri</string>
+
+    <string name="english_premier_league">English Premier League</string>
+    <string name="english_league_championship">English League Championship</string>
+    <string name="german_bundesliga">German Bundesliga</string>
+    <string name="italian_serie_a">Italian Serie A</string>
+    <string name="french_ligue_1">French Ligue 1</string>
+    <string name="spanish_la_liga">Spanish La Liga</string>
+
+    <array name="league">
+        <item>English Premier League</item>
+        <item>English League Championship</item>
+        <item>German Bundesliga</item>
+        <item>Italian Serie A</item>
+        <item>French Ligue 1</item>
+        <item>Spanish La Liga</item>
+    </array>
+
+    <string name="goals">Goals</string>
+    <string name="shots">Shots</string>
+    <string name="red_card_s">Red Card(s)</string>
+    <string name="yellow_card_s">Yellow Card(s)</string>
+    <string name="goal_keeper">Goalkeeper</string>
+    <string name="defense">Defense</string>
+    <string name="midfield">Midfield</string>
+    <string name="forward">Forward</string>
+    <string name="substitutes">Substitutes</string>
+    <string name="previous_match">There is no Previous Match(es)</string>
+    <string name="upcoming_match">There is no Upcoming Match(es)</string>
+    <string name="number">1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

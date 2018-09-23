@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimaryDark">#2c3e50</color>
+    <color name="colorAccent">#2c3e50</color>
+
+    //color tema
+    <color name="blackThema">#262626</color>
+    <color name="blueThema">#3b5997</color>
+    <color name="redThema">#b40505</color>
+    <color name="greenThema">#009688</color>
+    <color name="defaultThema">#2c3e50</color>
+
+    <color name="backgroundTab2">#dadada</color>
+    <color name="backgroundTab">#ecf0f1</color>
+    <color name="text_standar">#5e5e5e</color>
+    <color name="colorText">#292929</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="notification_color">#0288d1</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="navfun">#FF6666</color>
+</resources>
