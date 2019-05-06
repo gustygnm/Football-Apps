@@ -2,5 +2,4 @@
 
 ## Screenshoot:
 
-![Image](https://i.ibb.co/BBCd85n/Untitled-1.png)
-
+![Image1](https://i.ibb.co/wKy1Qmf/Untitled-1.png)
