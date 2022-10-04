@@ -1,5 +1,9 @@
 # Football - Apps
 
+## Contributions: 
+1. Hutang Apps
+2.
+
 ## Screenshoot Apps :
 
 ini adalah gambaran dari aplikasi Football-Apps.
