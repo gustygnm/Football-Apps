@@ -1,5 +1,9 @@
 # Football - Apps
 
+## Contributions: 
+1. 
+2.
+
 ## Screenshoot Apps :
 
 ini adalah gambaran dari aplikasi Football-Apps.
